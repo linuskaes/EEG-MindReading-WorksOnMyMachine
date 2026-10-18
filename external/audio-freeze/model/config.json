@@ -1,0 +1,138 @@
+{
+ "variant": "scratch",
+ "encoder": "cortiva+transformer",
+ "seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "architecture": {
+  "HIDDEN": 128,
+  "LATENT": 32,
+  "KERNEL": 5,
+  "DILATIONS": [
+   1,
+   2,
+   4,
+   8
+  ],
+  "INPUT_DROPOUT": 0.5,
+  "DROPOUT": 0.5,
+  "GROUP_NORM_GROUPS": 8,
+  "EEG_KERNEL": 9,
+  "TF_DIM": 64,
+  "TF_LAYERS": 2,
+  "TF_HEADS": 4,
+  "TF_DROPOUT": 0.1,
+  "TEMPERATURE_INIT": 0.07,
+  "N_FEATURES": 145,
+  "N_SLOTS": 77
+ },
+ "training": {
+  "features": {
+   "whisper": "openai/whisper-small",
+   "layer": 12,
+   "envelope_power": 0.6,
+   "rate": 50
+  },
+  "n_features": 145,
+  "channels": [
+   "Pz",
+   "P3",
+   "P7",
+   "O1",
+   "Oz",
+   "O2",
+   "P4",
+   "P8",
+   "P1",
+   "P5",
+   "PO7",
+   "PO3",
+   "POz",
+   "PO4",
+   "PO8",
+   "P6",
+   "P2"
+  ],
+  "band": [
+   0.2,
+   12.0
+  ],
+  "rate": 50,
+  "hidden": 128,
+  "latent": 32,
+  "dilations": [
+   1,
+   2,
+   4,
+   8
+  ],
+  "eeg_kernel": 9,
+  "tf": [
+   64,
+   2,
+   4
+  ],
+  "lr": 0.002,
+  "wd": 0.05,
+  "batch": 16,
+  "epochs": 20,
+  "patience": 3,
+  "subjects": 71,
+  "variants": [
+   "scratch",
+   "zero-shot",
+   "frozen",
+   "finetune"
+  ],
+  "ft_lr": 0.0006666666666666666,
+  "ft_epochs": 60,
+  "ft_patience": 6,
+  "inner": 0.1,
+  "inner_seed": 0
+ },
+ "our_subject_slots": {
+  "1": 71,
+  "2": 72,
+  "3": 73,
+  "4": 74,
+  "5": 75,
+  "6": 76
+ },
+ "channels": [
+  "Pz",
+  "P3",
+  "P7",
+  "O1",
+  "Oz",
+  "O2",
+  "P4",
+  "P8",
+  "P1",
+  "P5",
+  "PO7",
+  "PO3",
+  "POz",
+  "PO4",
+  "PO8",
+  "P6",
+  "P2"
+ ],
+ "eeg": {
+  "band_hz": [
+   0.2,
+   12.0
+  ],
+  "rate_hz": 50,
+  "window_s": 3.0
+ },
+ "eeg_normalisation": "per subject: minus mean response (17 x 150), divided by one std per channel; training recordings only; see normalisation.npz",
+ "validation": {
+  "top1": 0.1355,
+  "top5": 0.3296,
+  "mean_rank": 20.2556,
+  "top5_per_seed": 0.3026
+ }
+}

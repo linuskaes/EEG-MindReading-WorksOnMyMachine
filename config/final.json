@@ -1,0 +1,396 @@
+{
+  "band": [
+    0.2,
+    12.0
+  ],
+  "families": [
+    {
+      "name": "G-whisper32",
+      "features": {
+        "lowlevel": "full",
+        "whisper_layers": [
+          2,
+          3,
+          4
+        ],
+        "pca": 32,
+        "visual": [
+          {
+            "model": "dinov2-base",
+            "k": 16
+          }
+        ]
+      },
+      "config": {
+        "hidden": 128,
+        "latent": 32,
+        "blocks": 4,
+        "kernel": 5,
+        "dropout": 0.5,
+        "in_dropout": 0.5,
+        "eeg_kernel": 9,
+        "batch": 256,
+        "epochs": 30,
+        "stop_epoch": 22,
+        "lr": 0.002,
+        "wd": 0.05,
+        "noise": 0.0,
+        "multipos": 16,
+        "splice": 1.0,
+        "extra": {}
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "O-whisper32-audiorich",
+      "features": {
+        "lowlevel": "full",
+        "whisper_layers": [
+          2,
+          3,
+          4
+        ],
+        "pca": 32,
+        "audio_rich": true,
+        "visual": [
+          {
+            "model": "dinov2-base",
+            "k": 16
+          }
+        ]
+      },
+      "config": {
+        "hidden": 128,
+        "latent": 32,
+        "blocks": 4,
+        "kernel": 5,
+        "dropout": 0.5,
+        "in_dropout": 0.5,
+        "eeg_kernel": 9,
+        "batch": 256,
+        "epochs": 30,
+        "stop_epoch": 22,
+        "lr": 0.002,
+        "wd": 0.05,
+        "noise": 0.0,
+        "multipos": 16,
+        "splice": 1.0,
+        "extra": {}
+      },
+      "seeds": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311
+      ]
+    },
+    {
+      "name": "D-clip",
+      "features": {
+        "lowlevel": "full",
+        "whisper_layers": [
+          2,
+          3,
+          4
+        ],
+        "pca": 64,
+        "visual": [
+          {
+            "model": "dinov2-base",
+            "k": 16
+          },
+          {
+            "model": "clip-b32",
+            "k": 16
+          }
+        ]
+      },
+      "config": {
+        "hidden": 128,
+        "latent": 32,
+        "blocks": 4,
+        "kernel": 5,
+        "dropout": 0.5,
+        "in_dropout": 0.5,
+        "eeg_kernel": 9,
+        "batch": 256,
+        "epochs": 30,
+        "stop_epoch": 22,
+        "lr": 0.002,
+        "wd": 0.05,
+        "noise": 0.0,
+        "multipos": 16,
+        "splice": 1.0,
+        "extra": {}
+      },
+      "seeds": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411
+      ]
+    },
+    {
+      "name": "H-lowvisual",
+      "features": {
+        "lowlevel": "visual",
+        "whisper_layers": [
+          2,
+          3,
+          4
+        ],
+        "pca": 64,
+        "visual": [
+          {
+            "model": "dinov2-base",
+            "k": 16
+          }
+        ]
+      },
+      "config": {
+        "hidden": 128,
+        "latent": 32,
+        "blocks": 4,
+        "kernel": 5,
+        "dropout": 0.5,
+        "in_dropout": 0.5,
+        "eeg_kernel": 9,
+        "batch": 256,
+        "epochs": 30,
+        "stop_epoch": 22,
+        "lr": 0.002,
+        "wd": 0.05,
+        "noise": 0.0,
+        "multipos": 16,
+        "splice": 1.0,
+        "extra": {}
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    {
+      "name": "I-audiorich",
+      "features": {
+        "lowlevel": "full",
+        "whisper_layers": [
+          2,
+          3,
+          4
+        ],
+        "pca": 64,
+        "audio_rich": true,
+        "visual": [
+          {
+            "model": "dinov2-base",
+            "k": 16
+          }
+        ]
+      },
+      "config": {
+        "hidden": 128,
+        "latent": 32,
+        "blocks": 4,
+        "kernel": 5,
+        "dropout": 0.5,
+        "in_dropout": 0.5,
+        "eeg_kernel": 9,
+        "batch": 256,
+        "epochs": 30,
+        "stop_epoch": 22,
+        "lr": 0.002,
+        "wd": 0.05,
+        "noise": 0.0,
+        "multipos": 16,
+        "splice": 1.0,
+        "extra": {}
+      },
+      "seeds": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211
+      ]
+    }
+  ],
+  "subjects": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06"
+  ],
+  "candidate_ids": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
+    1039,
+    1040,
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1049,
+    1050,
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
+    1059,
+    1060,
+    1061,
+    1062,
+    1063,
+    1064,
+    1065,
+    1066,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071,
+    1072,
+    1073,
+    1074,
+    1075,
+    1076,
+    1077,
+    1078,
+    1079,
+    1080,
+    1081,
+    1082,
+    1083,
+    1084,
+    1085,
+    1086,
+    1087,
+    1088,
+    1089,
+    1090,
+    1091,
+    1092,
+    1093,
+    1094,
+    1095,
+    1096,
+    1097,
+    1098,
+    1099,
+    1100,
+    1101,
+    1102
+  ],
+  "group_weights": {
+    "internal": 0.7,
+    "coworker-audio": 0.2,
+    "coworker-video": 0.1
+  },
+  "csls_k": 1,
+  "pretrained": {
+    "whisper": {
+      "name": "openai/whisper-base",
+      "revision": "e37978b90ca9030d5170a5c07aadb050351a65bb"
+    },
+    "dinov2-base": {
+      "name": "facebook/dinov2-base",
+      "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+    },
+    "clip-b32": {
+      "name": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+    }
+  }
+}

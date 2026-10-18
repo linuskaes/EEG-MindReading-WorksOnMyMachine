@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortiva-final-v7"
+version = "7.0.0"
+description = "Final v7 EEG-to-video retrieval submission."
+requires-python = ">=3.11"
+dependencies = ["numpy==2.2.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "--strict-markers"
+testpaths = ["tests"]

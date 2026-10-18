@@ -1,0 +1,52 @@
+{
+  "python": "3.11.9",
+  "numpy": "2.2.6",
+  "torch": "2.14.1+cu130",
+  "device": "cuda",
+  "path": "Raw EEG; all 60 internal checkpoints plus audio/video checkpoints; existing stimulus caches reused, not media extraction rerun.",
+  "labels_used": false,
+  "subjects": {
+    "sub-01": {
+      "score_correlation": 0.9999999573599054,
+      "max_absolute_score_difference": 0.0014694164380253394,
+      "top1_changed": 0,
+      "top5_sets_changed": 0,
+      "ranking_entries_changed": 95
+    },
+    "sub-02": {
+      "score_correlation": 0.9999999609073855,
+      "max_absolute_score_difference": 0.0015172056379275656,
+      "top1_changed": 0,
+      "top5_sets_changed": 0,
+      "ranking_entries_changed": 83
+    },
+    "sub-03": {
+      "score_correlation": 0.9999999466703118,
+      "max_absolute_score_difference": 0.001308488725623001,
+      "top1_changed": 0,
+      "top5_sets_changed": 1,
+      "ranking_entries_changed": 132
+    },
+    "sub-04": {
+      "score_correlation": 0.9999999585350388,
+      "max_absolute_score_difference": 0.0012657188897506888,
+      "top1_changed": 0,
+      "top5_sets_changed": 0,
+      "ranking_entries_changed": 118
+    },
+    "sub-05": {
+      "score_correlation": 0.9999999487653299,
+      "max_absolute_score_difference": 0.001348795857955748,
+      "top1_changed": 0,
+      "top5_sets_changed": 0,
+      "ranking_entries_changed": 93
+    },
+    "sub-06": {
+      "score_correlation": 0.9999999479848197,
+      "max_absolute_score_difference": 0.0013360898273737376,
+      "top1_changed": 0,
+      "top5_sets_changed": 0,
+      "ranking_entries_changed": 102
+    }
+  }
+}

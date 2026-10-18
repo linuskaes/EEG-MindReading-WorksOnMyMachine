@@ -1,0 +1,19 @@
+{
+ "shape": [
+  1102,
+  150,
+  145
+ ],
+ "rows": "video IDs 1..1102 in order",
+ "grid": "3 s from video onset, 50 Hz (20-ms steps), causal alignment to the sound",
+ "columns": {
+  "0": "envelope (RMS per 20 ms, power 0.6)",
+  "1-80": "Whisper log-mel, 80 bands (2 frames of 10 ms averaged)",
+  "81-144": "openai/whisper-small encoder layer 12, PCA 64 (fitted on the public speech windows)"
+ },
+ "whisper": "openai/whisper-small",
+ "whisper_revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+ "audio": "mono 16 kHz; no audio track -> silence; padded to Whisper's 30 s",
+ "normalisation": "none: fit scaling on videos 1-1000 before use (our model: z-score per feature)",
+ "pca_source": "ICASSP 2023 Auditory EEG Decoding Challenge data (SparrKULee subset), CC BY-NC 4.0"
+}

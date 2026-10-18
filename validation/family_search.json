@@ -1,0 +1,149 @@
+{
+  "family-select": {
+    "selected": [
+      "G-w32-splice",
+      "H-lowvis-splice",
+      "I-arich-splice"
+    ],
+    "families": {
+      "A-base-splice": {},
+      "B-splice-2cuts": {
+        "extra": {
+          "multipos": 16,
+          "splice": 1.0,
+          "splice_cuts": 2
+        }
+      },
+      "C-h192-splice": {
+        "hidden": 192
+      },
+      "D-clip-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+vis-dinov2-base/16+vis-clip-b32/16"
+      },
+      "E-wsmall-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+whisper-small:6+vis-dinov2-base/16"
+      },
+      "F-hubert-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+hubert-base:4+vis-dinov2-base/16"
+      },
+      "G-w32-splice": {
+        "features": "lowlevel+whisper-base@32:2,3,4+vis-dinov2-base/16"
+      },
+      "H-lowvis-splice": {
+        "features": "lowlevel-visual+whisper-base:2,3,4+vis-dinov2-base/16"
+      },
+      "I-arich-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+arich+vis-dinov2-base/16"
+      },
+      "J-nosplice": {
+        "epochs": 20,
+        "stop_epoch": 15,
+        "extra": {
+          "multipos": 16
+        }
+      }
+    },
+    "base": {
+      "hidden": 128,
+      "dropout": 0.5,
+      "in_dropout": 0.5,
+      "epochs": 30,
+      "stop_epoch": 22,
+      "lr": 0.002,
+      "band": [
+        0.2,
+        12.0
+      ],
+      "noise": 0.0,
+      "keep_best": false,
+      "features": "lowlevel+whisper-base:2,3,4+vis-dinov2-base/16",
+      "extra": {
+        "multipos": 16,
+        "splice": 1.0
+      }
+    },
+    "seeds": 6
+  },
+  "family-select-extra": {
+    "selected": [
+      "G-w32-splice",
+      "O-w32-arich",
+      "D-clip-splice",
+      "H-lowvis-splice",
+      "F-hubert-splice"
+    ],
+    "families": {
+      "A-base-splice": {},
+      "B-splice-2cuts": {
+        "extra": {
+          "multipos": 16,
+          "splice": 1.0,
+          "splice_cuts": 2
+        }
+      },
+      "C-h192-splice": {
+        "hidden": 192
+      },
+      "D-clip-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+vis-dinov2-base/16+vis-clip-b32/16"
+      },
+      "E-wsmall-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+whisper-small:6+vis-dinov2-base/16"
+      },
+      "F-hubert-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+hubert-base:4+vis-dinov2-base/16"
+      },
+      "G-w32-splice": {
+        "features": "lowlevel+whisper-base@32:2,3,4+vis-dinov2-base/16"
+      },
+      "H-lowvis-splice": {
+        "features": "lowlevel-visual+whisper-base:2,3,4+vis-dinov2-base/16"
+      },
+      "I-arich-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+arich+vis-dinov2-base/16"
+      },
+      "J-nosplice": {
+        "epochs": 20,
+        "stop_epoch": 15,
+        "extra": {
+          "multipos": 16
+        }
+      },
+      "K-ast8-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+ast-audioset:8+vis-dinov2-base/16"
+      },
+      "L-ast4-splice": {
+        "features": "lowlevel+whisper-base:2,3,4+ast-audioset:4+vis-dinov2-base/16"
+      },
+      "M-ast-w32-splice": {
+        "features": "lowlevel+whisper-base@32:2,3,4+ast-audioset@32:8+vis-dinov2-base/16"
+      },
+      "N-lowvis-arich": {
+        "features": "lowlevel-visual+whisper-base:2,3,4+arich+vis-dinov2-base/16"
+      },
+      "O-w32-arich": {
+        "features": "lowlevel+whisper-base@32:2,3,4+arich+vis-dinov2-base/16"
+      }
+    },
+    "base": {
+      "hidden": 128,
+      "dropout": 0.5,
+      "in_dropout": 0.5,
+      "epochs": 30,
+      "stop_epoch": 22,
+      "lr": 0.002,
+      "band": [
+        0.2,
+        12.0
+      ],
+      "noise": 0.0,
+      "keep_best": false,
+      "features": "lowlevel+whisper-base:2,3,4+vis-dinov2-base/16",
+      "extra": {
+        "multipos": 16,
+        "splice": 1.0
+      }
+    },
+    "seeds": 6
+  }
+}

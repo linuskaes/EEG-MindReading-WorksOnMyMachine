@@ -1,0 +1,88 @@
+{
+  "name": "eeg-transformer-things-2026-10-18_144944-finetune-video-0-0-7-s-causal",
+  "created": "2026-10-18T14:50:54",
+  "source_run": "2026-10-18_144944",
+  "freeze_run": "2026-10-18_144944",
+  "model": {
+    "chosen": {
+      "variant": "finetune",
+      "channel_order": "recorded",
+      "video_window": "video 0-0.7 s (causal)"
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "architecture": {
+      "N_CHANNELS": 17,
+      "N_SAMPLES": 80,
+      "PATCH": 5,
+      "D_MODEL": 128,
+      "DEPTH": 4,
+      "HEADS": 4,
+      "DROPOUT": 0.1,
+      "TEMPERATURE_INIT": 0.07,
+      "N_SLOTS": 16
+    }
+  },
+  "pretraining": {
+    "window_s": 0.8,
+    "patch_s": 0.05,
+    "d": 128,
+    "depth": 4,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0003,
+    "wd": 0.05,
+    "batch": 1024,
+    "epochs": 60,
+    "patience": 6,
+    "warmup": 1
+  },
+  "finetuning": {
+    "window_s": 0.8,
+    "patch_s": 0.05,
+    "d": 128,
+    "depth": 4,
+    "heads": 4,
+    "dropout": 0.1,
+    "lr": 0.0003,
+    "wd": 0.05,
+    "batch": 1024,
+    "epochs": 60,
+    "patience": 6,
+    "warmup": 1,
+    "candidate_centring": true,
+    "ft_lr": 9.999999999999999e-05,
+    "ft_batch": 256,
+    "ft_epochs": 200,
+    "ft_patience": 20,
+    "inner": 0.1,
+    "inner_seed": 0,
+    "video_windows": {
+      "video 0-0.7 s (causal)": [
+        0.0,
+        0.7
+      ],
+      "video 0-3 s": [
+        0.0,
+        3.0
+      ]
+    }
+  },
+  "features": {
+    "rows": "video IDs 1..1102 in order",
+    "clip_targets": "openai/clip-vit-base-patch32 image embedding, mean over the frames of video 0-0.7 s (causal) (0.0, 0.7), unit length",
+    "source": "/home/ka/ka_scc/ka_iz3519/eeg-data/eeg-video-embeddings/clip_vit_b32",
+    "audio_targets": null
+  },
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "numpy": "2.2.6",
+    "python": "3.11.7"
+  },
+  "source_manifest_sha256": "b3d439151c0d9b844d94795e25c6f14c0347738a7a73c7a7fdee0a880ae049d8",
+  "payload_note": "Only final inference/training code, transforms, weights and inference reference scores are packaged. Root MANIFEST.json verifies the shipped payload."
+}

@@ -1,0 +1,129 @@
+{
+  "name": "audio-dual-encoder-2026-10-18_134354-scratch-cortiva-plus-transformer",
+  "created": "2026-10-18T13:45:44",
+  "source_run": "2026-10-18_134354",
+  "freeze_run": "2026-10-18_134354",
+  "model": {
+    "variant": "scratch",
+    "encoder": "cortiva+transformer",
+    "seeds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "architecture": {
+      "HIDDEN": 128,
+      "LATENT": 32,
+      "KERNEL": 5,
+      "DILATIONS": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "INPUT_DROPOUT": 0.5,
+      "DROPOUT": 0.5,
+      "GROUP_NORM_GROUPS": 8,
+      "EEG_KERNEL": 9,
+      "TF_DIM": 64,
+      "TF_LAYERS": 2,
+      "TF_HEADS": 4,
+      "TF_DROPOUT": 0.1,
+      "TEMPERATURE_INIT": 0.07,
+      "N_FEATURES": 145,
+      "N_SLOTS": 77
+    }
+  },
+  "training": {
+    "features": {
+      "whisper": "openai/whisper-small",
+      "layer": 12,
+      "envelope_power": 0.6,
+      "rate": 50
+    },
+    "n_features": 145,
+    "channels": [
+      "Pz",
+      "P3",
+      "P7",
+      "O1",
+      "Oz",
+      "O2",
+      "P4",
+      "P8",
+      "P1",
+      "P5",
+      "PO7",
+      "PO3",
+      "POz",
+      "PO4",
+      "PO8",
+      "P6",
+      "P2"
+    ],
+    "band": [
+      0.2,
+      12.0
+    ],
+    "rate": 50,
+    "hidden": 128,
+    "latent": 32,
+    "dilations": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "eeg_kernel": 9,
+    "tf": [
+      64,
+      2,
+      4
+    ],
+    "lr": 0.002,
+    "wd": 0.05,
+    "batch": 16,
+    "epochs": 20,
+    "patience": 3,
+    "subjects": 71,
+    "variants": [
+      "scratch",
+      "zero-shot",
+      "frozen",
+      "finetune"
+    ],
+    "ft_lr": 0.0006666666666666666,
+    "ft_epochs": 60,
+    "ft_patience": 6,
+    "inner": 0.1,
+    "inner_seed": 0
+  },
+  "features": {
+    "shape": [
+      1102,
+      150,
+      145
+    ],
+    "rows": "video IDs 1..1102 in order",
+    "grid": "3 s from video onset, 50 Hz (20-ms steps), causal alignment to the sound",
+    "columns": {
+      "0": "envelope (RMS per 20 ms, power 0.6)",
+      "1-80": "Whisper log-mel, 80 bands (2 frames of 10 ms averaged)",
+      "81-144": "openai/whisper-small encoder layer 12, PCA 64 (fitted on the public speech windows)"
+    },
+    "whisper": "openai/whisper-small",
+    "whisper_revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+    "audio": "mono 16 kHz; no audio track -> silence; padded to Whisper's 30 s",
+    "normalisation": "none: fit scaling on videos 1-1000 before use (our model: z-score per feature)",
+    "pca_source": "ICASSP 2023 Auditory EEG Decoding Challenge data (SparrKULee subset), CC BY-NC 4.0"
+  },
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.1",
+    "numpy": "2.2.6",
+    "python": "3.11.7"
+  },
+  "source_manifest_sha256": "ba419ea8a22efc4aa0efaaba3a0dd3dd183a1363adb18d9740ed426f92bc6cc0",
+  "payload_note": "Only final inference/training code, transforms, weights and inference reference scores are packaged. Root MANIFEST.json verifies the shipped payload."
+}

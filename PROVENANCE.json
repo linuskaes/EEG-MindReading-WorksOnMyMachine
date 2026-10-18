@@ -1,0 +1,40 @@
+{
+  "source_freeze_manifest_sha256": {
+    "v6_scores_sha256": "e24eaca48234bf0117bbf1fc8a7d71d058a025d14cd96886eb4d2ff05b0c6945",
+    "video_freeze_manifest_sha256": "b3d439151c0d9b844d94795e25c6f14c0347738a7a73c7a7fdee0a880ae049d8"
+  },
+  "source_package_manifest_sha256": "ded325dafae387be3f0183cec1a58b0e831973d96d7078511bc0ca284e704519",
+  "external": {
+    "coworker-audio": {
+      "name": "audio-dual-encoder-2026-10-18_134354-scratch-cortiva-plus-transformer",
+      "pca_source": "ICASSP 2023 Auditory EEG Decoding Challenge data (SparrKULee subset), CC BY-NC 4.0",
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "whisper": "openai/whisper-small",
+      "whisper_revision": "973afd24965f72e36ca33b3055d56a652f456b4d"
+    },
+    "coworker-video": {
+      "clip_targets": "openai/clip-vit-base-patch32 image embedding, mean over the frames of video 0-0.7 s (causal) (0.0, 0.7), unit length",
+      "name": "eeg-transformer-things-2026-10-18_144944-finetune-video-0-0-7-s-causal",
+      "pca_source": null,
+      "pretraining_data": "THINGS-EEG2 (Gifford et al., 2022, NeuroImage 264:119754; OSF 3jk45; CC BY 4.0)",
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_run": "2026-10-18_144944",
+      "whisper": null,
+      "whisper_revision": null
+    }
+  },
+  "limits": [
+    "Public-data pretraining lineage is supplier-declared, not independently audited.",
+    "Holdout was reused for tuning; it is validation, not an untouched test."
+  ]
+}

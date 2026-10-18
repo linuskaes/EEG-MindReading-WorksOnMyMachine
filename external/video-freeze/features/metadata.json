@@ -1,0 +1,6 @@
+{
+ "rows": "video IDs 1..1102 in order",
+ "clip_targets": "openai/clip-vit-base-patch32 image embedding, mean over the frames of video 0-0.7 s (causal) (0.0, 0.7), unit length",
+ "source": "/home/ka/ka_scc/ka_iz3519/eeg-data/eeg-video-embeddings/clip_vit_b32",
+ "audio_targets": null
+}

@@ -1,0 +1,26 @@
+{
+  "candidate": "v7-video-csls1-hungarian",
+  "status": "team-selected-final",
+  "weights": {
+    "internal": 0.7,
+    "coworker-audio": 0.2,
+    "coworker-video": 0.1
+  },
+  "csls_k": 1,
+  "assignment": "deterministic Hungarian; assigned ID first; remaining CSLS order",
+  "excluded": [
+    "v8",
+    "coworker-cortiva"
+  ],
+  "dev": {
+    "mrr": 0.819576970774732,
+    "queries": 408,
+    "top1": 0.7254901960784313,
+    "top1_hits": 296,
+    "top5": 0.9387254901960784,
+    "top5_hits": 383
+  },
+  "submission_sha256": "4c56c66178e8e459168f94c11f02534a20a907ea1695b9e985b3b33fb70103e3",
+  "source_manifest_sha256": "f056fcac3c17b1b195f2b0fca795d84f12a1a8ddf83240e040891e402d11f1b2",
+  "test_labels_available": false
+}
