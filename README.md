@@ -1,3 +1,7 @@
+Our submission files are `predictions/sub-05_ranked_candidate_list.npy` and
+`predictions/sub-06_ranked_candidate_list.npy`, also packaged in `predictions/submission.zip`.
+
+
 # CORTIVA — final v7 EEG-to-video retrieval
 
 We identify which of 102 three-second videos elicited an EEG recording. Our
