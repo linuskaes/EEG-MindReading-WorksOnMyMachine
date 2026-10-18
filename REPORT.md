@@ -1,4 +1,5 @@
 # Final method and submission report
+For a more detailed Report read [the technical report](./technical_report.pdf).
 
 ## Approach
 
